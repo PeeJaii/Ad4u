@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../styles/signup.css";
+import Axios from 'axios';
 
 
 function SignUp() {
@@ -17,6 +18,14 @@ function SignUp() {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
+
+    Axios.post("http://localhost:3001/signup", {
+      username: formValues.username,
+      email: formValues.email,
+      password: formValues.password
+    }).then((response) => {
+      console.log(response);
+    });
   };
 
   useEffect(() => {

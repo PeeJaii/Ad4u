@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to='/'>
+        <NavLink to='/signin/profile'>
           <img src={require('../../images/logo.svg')} alt='logo' />
         </NavLink>
         <Bars />
@@ -23,8 +23,6 @@ const Navbar = () => {
           <NavLink to='/signin/profile/adspace' >
             Adspace owners
           </NavLink>
-          {/* Second Nav */}
-          {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
         </NavMenu>
         <NavBtn>
           <NavBtnLink to='/signin'>Sign In</NavBtnLink>

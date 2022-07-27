@@ -1,0 +1,23 @@
+.fil {
+ color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+    border-radius: 4px;
+  background: #2dc8e7;
+  padding: 10px 22px;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  /* Second Nav */
+  margin-left: 24px;
+}

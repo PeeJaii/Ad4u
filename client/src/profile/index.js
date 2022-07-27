@@ -9,10 +9,10 @@ const Profile = () => {
     <div>
     <Navbar1 /> 
     <Routes>
-        <Route path='/signin/profile/advertisers' element={<Advertisers />} />
-        <Route path='/signin/profile/adspace' element={<Adspace />} />
+        <Route path='/advertisers' element={<Advertisers />} />
+        <Route path='/adspace' element={<Adspace />} />
     </Routes></div>
-  )
+  );
 }
 
-export default Profile
+export default Profile;

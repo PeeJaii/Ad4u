@@ -5,13 +5,19 @@ import Home from './pages';
 import Profile from './profile';
 
 function App() {
+  var rootStyle = {
+    backgroundColor : 'white',
+    height: '100%',
+   
+  }
   return (
+    <div style={rootStyle}>
     <Router>
       <Routes>
         <Route exact path='/*' element={<Home />} />
         <Route path='/signin/profile/*' element={<Profile />} />
       </Routes>
-    </Router>
+    </Router></div>
   );
 }
 

@@ -5,6 +5,7 @@ import Services from './services';
 import Contact from './contact';
 import SignUp from './signup';
 import SignIn from './signin';
+import Home1 from './home';
 import { Routes, Route } from 'react-router-dom'
 
 
@@ -13,6 +14,7 @@ const Home = () => {
     <div>
       <Navbar />
       <Routes>
+      <Route path='/' element={<Home1 />} />
       <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
         <Route path='/contact-us' element={<Contact />} />
