@@ -55,7 +55,41 @@ const db = mysql.createConnection({
           res.send(result);
           }
           else {
-            res.send({message: "Wrong username/password combination"});
+            res.send({message: "Error"});
+          }
+      });
+  });
+
+  app.get("/youradspace/posted", (req, res) => {
+    db.query(
+      "SELECT * FROM adboards WHERE owner_id = ?",
+      [ ownerId ],
+      (err, result) => {
+        if (err) {
+          console.log({err: err});
+        } 
+          if(result){
+          res.send(result);
+          }
+          else {
+            res.send({message: "Error"});
+          }
+      });
+  });
+
+  app.get("/youradspace/rented", (req, res) => {
+    db.query(
+      "SELECT * FROM adboards WHERE rent_id = ?",
+      [ rentId ],
+      (err, result) => {
+        if (err) {
+          console.log({err: err});
+        } 
+          if(result){
+          res.send(result);
+          }
+          else {
+            res.send({message: "Error"});
           }
       });
   });

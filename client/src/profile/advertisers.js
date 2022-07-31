@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Filter from '../components/filter'
 import Card from '../components/card'
-import '../styles/card.css'
-import Axios from 'axios'
+import Axios from 'axios';
+import '../styles/card.css';
 
 
 const Advertisers = () => {
-  const [title, setTitle] = useState([""]);
+  const [adboards, setAdboards] = useState([]);
 
-  Axios.get("http://localhost:3001/cards", {
-  }).then((response) => {
-    console.log(response.data .length);
-    // for (const value of response.data){
-    // setTitle([...title, value.title]);
-    // }
-  });
+  useEffect(() => {Axios.get("http://localhost:3001/cards").then((response) => {
+    setAdboards(response.data);
+    console.log(adboards);
+  })}, []);
 
-  return (
-    <div>
+return(
+  <div>
     <div><Filter /></div>
-    <div className='wrapper'><div><Card title={title[0]}/><Card /></div></div>
+    <div className='wrapper'>
+      {adboards.map((val) =>  {{return(
+      <Card title={val.title} location={val.location}/>);
+      }})
+      }
+      </div>
     </div>
-  )
+)
 }
 
 export default Advertisers;

@@ -64,7 +64,7 @@ function SignUp() {
       )}
 
       <form onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
+        <h1>SignUp Form</h1>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">

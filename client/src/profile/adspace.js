@@ -1,7 +1,7 @@
 import React,{ useState } from 'react'
-import ReactDOM from 'react-dom';
 import '../styles/adspace.css'
 import Axios from 'axios'
+import img1 from '../images/h_img.png'
 
 const Adspace = () => {
   const [title , setTitle] = useState('');
@@ -36,7 +36,7 @@ const Adspace = () => {
     <form className='frm'>
     <h2> AD4U </h2>
     <h3> Adspace Upload Form </h3>
-    <img className='ima' src="/gfg.png" />
+    <img className='ima' src={img1} />
         <label >
           TITLE:
         </label><br/>
@@ -49,7 +49,7 @@ const Adspace = () => {
           IMAGE:
         </label><br/>
         <input type="text" value={image} required onChange={(e) => {handleImageChange(e)}} /><br/>
-        <button className="pad" onClick={(e) => {handleSubmit(e)}}>Submit</button>
+        <button className="pad buto" onClick={(e) => {handleSubmit(e)}}>Submit</button>
       </form>
     </header>
     </div>

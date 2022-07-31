@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Navbar from '../components/Navbar';
 import About from './about';
 import Services from './services';
@@ -19,7 +19,7 @@ const Home = () => {
         <Route path='/services' element={<Services />} />
         <Route path='/contact-us' element={<Contact />} />
         <Route path='/sign-up' element={<SignUp />} />
-        <Route path='/signin' element={<SignIn />} />
+        <Route path='/signin' element={<SignIn/>} />
         </Routes>
     </div>
   );

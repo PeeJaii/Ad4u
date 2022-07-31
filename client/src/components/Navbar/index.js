@@ -7,13 +7,14 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+import img2 from '../../images/h_img.png'
 
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <img src={require('../../images/logo.svg')} alt='logo' />
+          <img src={img2} alt='logo' />
         </NavLink>
         <Bars />
         <NavMenu>

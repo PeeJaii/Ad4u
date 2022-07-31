@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Nav,
   NavLink,
@@ -7,13 +7,15 @@ import {
   NavBtn,
   NavBtnLink
 } from './NavbarElements';
+import img2 from '../../images/h_img.png'
+import '../../styles/nav.css'
 
 const Navbar = () => {
   return (
     <>
       <Nav>
         <NavLink to='/signin/profile'>
-          <img src={require('../../images/logo.svg')} alt='logo' />
+          <img src={img2} alt='logo' />
         </NavLink>
         <Bars />
         <NavMenu>
@@ -23,9 +25,12 @@ const Navbar = () => {
           <NavLink to='/signin/profile/adspace' >
             Adspace owners
           </NavLink>
-        </NavMenu>
+        <NavLink to='/signin/profile/youradspace' >
+            Your adspaces
+          </NavLink>
+          </NavMenu>
         <NavBtn>
-          <NavBtnLink to='/signin'>Sign In</NavBtnLink>
+          <NavBtnLink Link to='/signin' >Log Out</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

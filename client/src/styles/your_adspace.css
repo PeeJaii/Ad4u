@@ -1,0 +1,19 @@
+.post {
+    width: 600px;
+    height: 150px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 114%;
+    display: flex;
+    padding-left: 112px;
+    padding-top: 50px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 20rem));
+    gap: 2rem;
+    justify-content: center;
+}

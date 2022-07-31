@@ -11,6 +11,7 @@ function SignIn() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [id, setId] = useState(0);
 
   const login = () => {
     if(username===""||password===""){
@@ -27,6 +28,7 @@ function SignIn() {
           window.alert("enter proper credentials");
         }
         else{
+          setId(response.data.id)
           window.location.href = 'signin/profile';
         }
       });
@@ -57,7 +59,7 @@ function SignIn() {
              <input type="password" placeholder="password" className="name" onChange={(e) => {setPassword(e.target.value)}} />
            </div>
           <div className="login-button">
-          <button onClick={login}>Login</button>
+          <button className='buto' onClick={login}>Login</button>
           </div>
            
             <p className="link">
