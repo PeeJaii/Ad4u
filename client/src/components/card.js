@@ -31,7 +31,8 @@ const Card = (props) => {
             <img src ={props.img}className='card_image'></img>
             <h2 className='card_title'>{props.title}</h2>
     <p className='card_description'>Location: {props.location}</p>
-    <p className='card_description'>Type: {props.type}</p></div>
+    <p className='card_description'>Type: {props.type}</p>
+    <p className='card_description'>Price: {props.price}</p></div>
     <button className='card_btn' onClick={rent(props.title) }>{props.button}</button></div>
   )
 }
