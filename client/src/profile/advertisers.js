@@ -10,7 +10,6 @@ const Advertisers = () => {
 
   useEffect(() => {Axios.get("http://localhost:3001/cards").then((response) => {
     setAdboards(response.data);
-    console.log(adboards);
   })}, []);
 
 return(
@@ -18,7 +17,7 @@ return(
     <div><Filter /></div>
     <div className='wrapper'>
       {adboards.map((val) =>  {{return(
-      <Card title={val.title} location={val.location}/>);
+      <Card title={val.title} location={val.location} img={val.image} type={val.type} button="Rent"/>);
       }})
       }
       </div>

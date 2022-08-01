@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import '../../styles/filter.css'
 import {
     Nav,
@@ -8,6 +8,9 @@ import {
   } from './NavbarElements';
   
   const Filter = () => {
+    const [location, setLocation] = useState('');
+    const [type, setType] = useState('');
+
     return (
       <>
         <Nav>
@@ -16,8 +19,8 @@ import {
         </div>
           <Bars />
           <NavMenu>
-            <input type="text" placeholder="Location" className='fil' />
-            <input type="text" placeholder="Type" className='fil' />
+            <input type="text" placeholder="Location" className='fil' onChange = {(e) => {setLocation(e.target.value)}}/>
+            <input type="text" placeholder="Type" className='fil' onChange = {(e) => {setType(e.target.value)}}/>
           </NavMenu>
           <NavBtn className='btn'>
           Search

@@ -6,8 +6,7 @@ import Adspace from './adspace'
 import Home1 from '../pages/home'
 import Youradspace from './your_adspace'
 
-const Profile = (props) => {
-  console.log(props.ownerId)
+const Profile = () => {
   return (
     <div>
     <Navbar1 /> 

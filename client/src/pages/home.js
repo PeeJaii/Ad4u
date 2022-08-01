@@ -69,6 +69,7 @@ const Home1 = () => {
   </div>
 </div>
 <div className='find' id='services'>Services</div>
+<div className='lor'>We make </div>
     </div>    
     <img src={img1} className='img1' alt='' />
     </div>

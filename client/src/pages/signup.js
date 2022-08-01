@@ -25,7 +25,7 @@ function SignUp() {
       password: formValues.password
     }).then((response) => {
       console.log(response);
-    });
+    }).then(()=>{window.location.reload(false);})
   };
 
   useEffect(() => {
@@ -58,7 +58,7 @@ function SignUp() {
   return (
     <div className="container">
       {Object.keys(formErrors).length === 0 && isSubmit ? (
-        <div className="ui message success">Signed in successfully</div>
+        <div className="ui message success">Signed up successfully</div>
       ) : (
         <pre>{JSON.stringify(formValues, undefined, 2)}</pre>
       )}

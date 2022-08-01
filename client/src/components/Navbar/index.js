@@ -8,6 +8,8 @@ import {
   NavBtnLink
 } from './NavbarElements';
 import img2 from '../../images/h_img.png'
+import { Link, animateScroll as scroll } from "react-scroll";
+import '../../styles/nav.css'
 
 const Navbar = () => {
   return (
@@ -18,12 +20,12 @@ const Navbar = () => {
         </NavLink>
         <Bars />
         <NavMenu>
-          <NavLink to='/about' >
+        <Link to="about" smooth={true} duration={500} className='link1'>
             About
-          </NavLink>
-          <NavLink to='/services' >
+          </Link>
+          <Link to="services" smooth={true} duration={500} className='link1'>
             Services
-          </NavLink>
+          </Link>
           <NavLink to='/sign-up' >
             Sign Up
           </NavLink>

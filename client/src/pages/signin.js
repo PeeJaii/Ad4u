@@ -11,7 +11,6 @@ function SignIn() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [id, setId] = useState(0);
 
   const login = () => {
     if(username===""||password===""){
@@ -28,7 +27,7 @@ function SignIn() {
           window.alert("enter proper credentials");
         }
         else{
-          setId(response.data.id)
+          localStorage.setItem('id', response.data[0].idAccounts);
           window.location.href = 'signin/profile';
         }
       });

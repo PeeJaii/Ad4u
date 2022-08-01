@@ -30,7 +30,7 @@ const Navbar = () => {
           </NavLink>
           </NavMenu>
         <NavBtn>
-          <NavBtnLink Link to='/signin' >Log Out</NavBtnLink>
+          <NavBtnLink Link to='/signin' onClick={()=>{localStorage.clear()}}>Log Out</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

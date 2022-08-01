@@ -7,6 +7,9 @@ const Adspace = () => {
   const [title , setTitle] = useState('');
     const [location , setLocation] = useState('');
     const [image , setImage] = useState('');
+    const [type , setType] = useState('');
+    const [price, setPrice] = useState('');
+    const id = localStorage.getItem('id');
  
     const handleTitleChange =(e)=>{
       setTitle(e.target.value);
@@ -18,19 +21,35 @@ const Adspace = () => {
       setImage(e.target.value);
     }
 
+    const handleTypeChange =(e)=>{
+      setType(e.target.value);
+    }
+
+    const handlePriceChange =(e)=>{
+      setPrice(e.target.value);
+    }
+
     const handleSubmit=(e)=>{
       e.preventDefault();
-
       Axios.post("http://localhost:3001/adspace", {
+        id: id,
         title: title,
         location: location,
-        image: image
-      }).then((response) => {
-        console.log(response);
-      });
- 
+        type: type,
+        image: image,
+        price: price,
+      })
+      .then((response) => {
+        setPrice('');
+        setImage('');
+        setLocation('')
+        setTitle('')
+        setType('')
+        window.location.reload(false);
+      })
     }
   return (
+    
     <div className="App">
     <header className="App-header">
     <form className='frm'>
@@ -49,6 +68,14 @@ const Adspace = () => {
           IMAGE:
         </label><br/>
         <input type="text" value={image} required onChange={(e) => {handleImageChange(e)}} /><br/>
+        <label>
+          TYPE:
+        </label><br/>
+        <input type="text" value={type} required onChange={(e) => {handleTypeChange(e)}} /><br/>
+        <label>
+          PRICE:
+        </label><br/>
+        <input type="text" value={price} required onChange={(e) => {handlePriceChange(e)}} /><br/>
         <button className="pad buto" onClick={(e) => {handleSubmit(e)}}>Submit</button>
       </form>
     </header>
